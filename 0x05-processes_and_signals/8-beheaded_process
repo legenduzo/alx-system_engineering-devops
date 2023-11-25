@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script kills a looping script
+
+pkill -SIGKILL -f "7-highlander"
