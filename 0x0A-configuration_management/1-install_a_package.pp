@@ -1,16 +1,16 @@
 # installs flask
-package { 'python3-pip':
+package { 'pip':
   ensure => installed,
 }
 
 package { 'Werkzeug':
-  ensure   => installed,
-  provider => 'pip3',
+  ensure   => 2.1.1,
+  provider => 'pip',
   require  => Package['python3-pip'],
 }
 
 package { 'Flask':
   ensure   => '2.1.0',
-  provider => 'pip3',
+  provider => 'pip',
   require  => [Package['python3-pip'], Package['Werkzeug']],
 }
